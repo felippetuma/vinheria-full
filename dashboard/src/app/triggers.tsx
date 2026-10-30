@@ -25,6 +25,8 @@ export default function TriggersScreen() {
   const set = (m: Metric, k: 'min' | 'max', v: string) =>
     setForm((f) => ({ ...f, [m]: { ...f[m], [k]: v } }));
 
+  // Os campos são texto para aceitar vírgula decimal; só viram número ao salvar.
+  // min >= max é rejeitado porque a faixa vazia deixaria a métrica sempre em alerta.
   const save = () => {
     const next = {} as Triggers;
     for (const m of METRICS) {

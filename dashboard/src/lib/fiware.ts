@@ -18,6 +18,15 @@ export const COMMANDS = {
   off: 'alertOff',          // desliga LED
 };
 
+// O ESP32 publica a luminosidade como leitura bruta do ADC de 12 bits (0 a 4095).
+// O dashboard, os gráficos e os triggers trabalham em %, então convertemos aqui,
+// uma única vez, na borda de leitura da API.
+// Fórmula: % = bruto / 4095 * 100, com 1 casa decimal.
+// Os limites do firmware (0 a 1229) equivalem a 0 a 30 %, o padrão dos triggers.
+export const ADC_MAX = 4095;
+const adcParaPercentual = (bruto: number) => Math.round((bruto / ADC_MAX) * 1000) / 10;
+const converter = (m: Metric, v: number) => (m === 'luminosity' ? adcParaPercentual(v) : v);
+
 const base = (s: Settings, port: number) => `http://${s.host}:${port}`;
 
 const headers = (s: Settings, json = false): Record<string, string> => ({
@@ -56,6 +65,9 @@ export async function registerDevice(
   rawId: string
 ): Promise<{ device: Device; warning?: string }> {
   const id = rawId.trim().replace(/\s+/g, '');
+  // O device_id (ex.: vinheria001) precisa ser igual ao DEVICE_ID do firmware, porque
+  // ele compõe os tópicos MQTT /TEF/<device_id>/... e o prefixo dos comandos.
+  // Os object_id t, h e l são os atributos que o ESP32 publica.
   const device = {
     device_id: `${s.entityType.toLowerCase()}${id}`,
     entity_name: `urn:ngsi-ld:${s.entityType}:${id}`,
@@ -76,6 +88,8 @@ export async function registerDevice(
     body: JSON.stringify({ devices: [device] }),
   });
 
+  // Sem esta subscription o Orion não avisa o STH-Comet e o histórico fica vazio.
+  // Falha aqui não desfaz o cadastro: devolvemos um aviso para a tela.
   try {
     await request(`${base(s, PORTS.orion)}/v2/subscriptions`, {
       method: 'POST',
@@ -122,7 +136,7 @@ export async function getLatest(s: Settings, entity: string): Promise<Partial<Re
   const out: Partial<Record<Metric, number>> = {};
   METRICS.forEach((m) => {
     const v = Number(json?.[m]);
-    if (json?.[m] !== undefined && Number.isFinite(v)) out[m] = v;
+    if (json?.[m] !== undefined && Number.isFinite(v)) out[m] = converter(m, v);
   });
   return out;
 }
@@ -143,16 +157,20 @@ export async function getHistory(
     );
     const values = json?.contextResponses?.[0]?.contextElement?.attributes?.[0]?.values ?? [];
     return values
-      .map((v: any) => ({ time: v.recvTime as string, value: Number(v.attrValue) }))
+      .map((v: any) => ({ time: v.recvTime as string, value: converter(metric, Number(v.attrValue)) }))
       .filter((r: Reading) => Number.isFinite(r.value))
       .sort((a: Reading, b: Reading) => +new Date(a.time) - +new Date(b.time));
   } catch (e: any) {
+    // O STH-Comet responde 404 enquanto não gravou nenhum ponto da entidade;
+    // isso é um estado normal logo após o cadastro, não um erro.
     if (String(e.message).startsWith('404')) return []; // ainda sem dados
     throw e;
   }
 }
 
 
+// Comando passa pelo Orion (PATCH no atributo de tipo command), que repassa ao IoT Agent;
+// ele publica em /TEF/<device_id>/cmd. O front-end nunca fala MQTT direto.
 export async function sendCommand(s: Settings, entity: string, command: string) {
   await request(`${base(s, PORTS.orion)}/v2/entities/${encodeURIComponent(entity)}/attrs`, {
     method: 'PATCH',

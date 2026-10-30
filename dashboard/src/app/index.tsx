@@ -53,14 +53,19 @@ export default function Dashboard() {
     return () => clearInterval(id);
   }, [load]);
 
-  // Quais métricas estão fora dos limites
+  // Quais métricas estão fora dos limites. Os triggers são do app: o firmware tem
+  // limites próprios e fixos (ver docs/alertas-e-triggers.md).
   const anomalies = METRICS.filter((m) => {
     const v = latest[m];
     return v !== undefined && (v < triggers[m].min || v > triggers[m].max);
   });
   const key = autoAlerts ? anomalies.join(',') : '';
 
-  // Dispara comandos ao ESP32 (LED azul + buzzer) quando o conjunto de anomalias muda
+  // Dispara comandos ao ESP32 (LED azul + buzzer) quando o conjunto de anomalias muda.
+  // Só reage a mudanças (comparando com lastKey) para não reenviar o mesmo comando a cada
+  // polling de 5 s. O alertOff antes dos novos comandos evita deixar ligado um alerta
+  // de métrica que já normalizou. O firmware também derruba o alerta sozinho quando
+  // a leitura local volta ao normal.
   useEffect(() => {
     if (!selected || key === lastKey.current) return;
     const prev = lastKey.current;
