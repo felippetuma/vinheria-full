@@ -68,9 +68,9 @@ const size_t TAM_CLIENT_ID = 64;
 
 // ---------------- SENSOR DHT ----------------
 
-// Tipo do sensor: hardware real = DHT11.
-// No Wokwi (que simula um DHT22) use DHTesp::DHT22.
-#define DHT_TYPE DHTesp::DHT22
+// Tipo do sensor: hardware real = DHT11 (valor usado no hands-on).
+// O Wokwi simula um DHT22: para rodar a simulacao troque para DHTesp::DHT22.
+#define DHT_TYPE DHTesp::DHT11
 
 // Casas decimais publicadas: DHT11 tem resolucao de 1 unidade (0).
 // Com DHT22 / Wokwi use 1.
@@ -81,6 +81,9 @@ DHTesp dht;
 // ---------------- LIMITES DOS SENSORES ----------------
 
 // Faixa do DHT11: 0 a 50 C e 20 a 90 % UR. Os limites abaixo estao dentro dela.
+// Estes limites sao fixos no firmware e independentes dos triggers do app: o ESP32
+// detecta anomalias sozinho, mesmo sem o dashboard. Ao mudar aqui, espelhe no app
+// (luminosidade: 1229 de 4095 equivale a 30 %).
 
 // Temperatura em graus Celsius
 float temperaturaMin = 10.0;
@@ -123,6 +126,14 @@ ModoLed ledModo = LED_AUTO;
 // Buzzer: forcado (tom continuo) ou silenciado ate o fim da anomalia atual
 bool buzzerForcado = false;
 bool buzzerSilenciado = false;
+
+// Alerta remoto (comandos alertTemp/alertHum/alertLum do front-end).
+// Um flag por metrica, porque o dashboard pode enviar mais de uma anomalia.
+// Cada flag cai quando a leitura local da metrica normaliza (ver lerSensores)
+// ou todos caem com alertOff.
+bool remotoTemperatura = false;
+bool remotoUmidade = false;
+bool remotoLuminosidade = false;
 
 // ---------------- ALERTA SONORO SEM delay() ----------------
 // Sequencia de tons: o primeiro toca em emitirSom(), os demais em
@@ -269,7 +280,8 @@ void publicarSensores() {
 
 // Estado dos atuadores: "on" se buzzer ou LED estao acionados
 bool existeAlerta() {
-  return alertaTemperatura || alertaUmidade || alertaLuminosidade;
+  return alertaTemperatura || alertaUmidade || alertaLuminosidade ||
+         remotoTemperatura || remotoUmidade || remotoLuminosidade;
 }
 
 bool atuadoresAtivos() {
@@ -307,8 +319,42 @@ char *aparar(char *texto) {
   return texto;
 }
 
+// Prepara o buzzer para tocar o padrao do alerta remoto no proximo ciclo
+void iniciarAlertaRemoto() {
+  buzzerForcado = false;     // o tom continuo manual cede ao padrao da metrica
+  buzzerSilenciado = false;  // alertX deve soar mesmo depois de um buzzer_off
+  ultimoAlertaSonoro = "";   // forca controlarAlertas a emitir o padrao agora
+}
+
 // Executa o comando recebido; retorna false se for desconhecido
 bool executarComando(const char *cmd, const char *params) {
+  // Comandos enviados pelo dashboard. LED e buzzer sao tratados em
+  // controlarAlertas(), que ja pisca com millis() e toca o padrao da metrica.
+  if (strcmp(cmd, "alertTemp") == 0) {
+    remotoTemperatura = true;
+    iniciarAlertaRemoto();
+    return true;
+  }
+
+  if (strcmp(cmd, "alertHum") == 0) {
+    remotoUmidade = true;
+    iniciarAlertaRemoto();
+    return true;
+  }
+
+  if (strcmp(cmd, "alertLum") == 0) {
+    remotoLuminosidade = true;
+    iniciarAlertaRemoto();
+    return true;
+  }
+
+  if (strcmp(cmd, "alertOff") == 0) {
+    remotoTemperatura = false;
+    remotoUmidade = false;
+    remotoLuminosidade = false;
+    return true;
+  }
+
   if (strcmp(cmd, "buzzer_on") == 0) {
     buzzerForcado = true;
     buzzerSilenciado = false;
@@ -588,6 +634,11 @@ void lerSensores() {
     (luminosidade < luminosidadeMin ||
      luminosidade > luminosidadeMax);
 
+  // O alerta remoto termina quando a leitura local da metrica volta ao normal
+  if (!alertaTemperatura)  remotoTemperatura = false;
+  if (!alertaUmidade)      remotoUmidade = false;
+  if (!alertaLuminosidade) remotoLuminosidade = false;
+
   // Exibe os dados no monitor serial
   Serial.println("----------------------------------");
 
@@ -677,10 +728,10 @@ void controlarAlertas() {
     // depois luminosidade.
     String alertaAtual;
 
-    if (alertaTemperatura) {
+    if (alertaTemperatura || remotoTemperatura) {
       alertaAtual = "TEMPERATURA";
     }
-    else if (alertaUmidade) {
+    else if (alertaUmidade || remotoUmidade) {
       alertaAtual = "UMIDADE";
     }
     else {
