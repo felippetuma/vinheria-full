@@ -1,10 +1,8 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import { AppState } from './types';
-
 // Estado global só em memória: configurações e triggers voltam a estes valores ao
 // fechar o app (não há persistência). O host é um IP privado de exemplo e deve ser
 // trocado na aba Config pelo IP da EC2.
-
 export const DEFAULT_STATE: AppState = {
   settings: {
     host: '192.168.0.10', // <- IP FIWARE

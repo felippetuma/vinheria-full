@@ -9,7 +9,7 @@ import { Settings } from '../lib/types';
 export default function SettingsScreen() {
   const { state, update } = useApp();
   const [form, setForm] = useState<Settings>(state.settings);
-  const [result, setResult] = useState<{ name: string; ok: boolean }[]>([]);
+  const [result, setResult] = useState<{ name: string; ok: boolean; error?: string }[]>([]);
   const [testing, setTesting] = useState(false);
 
   useEffect(() => setForm(state.settings), [state.settings]);
@@ -43,6 +43,7 @@ export default function SettingsScreen() {
           {result.map((r) => (
             <Text key={r.name} style={s.line}>
               {r.ok ? '✓' : '✗'}  {r.name}
+              {r.error ? `\n    ${r.error}` : ''}
             </Text>
           ))}
         </Card>
