@@ -83,7 +83,7 @@ DHTesp dht;
 // Faixa do DHT11: 0 a 50 C e 20 a 90 % UR. Os limites abaixo estao dentro dela.
 // Estes limites sao fixos no firmware e independentes dos triggers do app: o ESP32
 // detecta anomalias sozinho, mesmo sem o dashboard. Ao mudar aqui, espelhe no app
-// (luminosidade: 1229 de 4095 equivale a 30 %).
+// (luminosidade: o firmware publica em %, 0 a 100, igual ao app).
  
 // Temperatura em graus Celsius
 float temperaturaMin = 10.0;
@@ -93,7 +93,7 @@ float temperaturaMax = 30.0;
 float umidadeMin = 60.0;
 float umidadeMax = 80.0;
  
-// Luminosidade: leitura analogica do ESP32 (0 a 4095)
+// Luminosidade em % (0 a 100): lerLuminosidadePct converte o ADC (0 a 4095)
 int luminosidadeMin = 0;
 int luminosidadeMax = 40;
  
