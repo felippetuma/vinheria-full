@@ -4,7 +4,7 @@ Voltar ao [README](../README.md).
 
 | Item | Valor |
 |---|---|
-| Link do projeto | `https://wokwi.com/projects/479272509375634433` |
+| Link do projeto | [`Link do Projeto no Wokwi`](https://wokwi.com/projects/479272509375634433) |
 | Placa | ESP32 DevKit V1 |
 | Sensores | LDR (`wokwi-photoresistor-sensor`) e DHT22 (`wokwi-dht22`) |
 | Atuador | Buzzer. O LED azul é o LED embutido do ESP32 (GPIO2) |
