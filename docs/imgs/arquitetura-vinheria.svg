@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1410" width="1600" height="1410" font-family="Inter, 'Segoe UI', Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="a-0f9d8a" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 1 L11 6 L0 11 Z" fill="#0f9d8a"/></marker>
+<marker id="a-ea580c" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 1 L11 6 L0 11 Z" fill="#ea580c"/></marker>
+<marker id="a-64748b" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 1 L11 6 L0 11 Z" fill="#64748b"/></marker>
+<filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="1600" height="1410" fill="#ffffff"/>
+<text x="40" y="46" font-size="28" fill="#0f172a" font-weight="700" text-anchor="start" >Vinheria Full · Arquitetura em camadas</text>
+<text x="40" y="72" font-size="13" fill="#64748b" font-weight="400" text-anchor="start" >CP5 · App Expo/React Native · Orion · IoT Agent UltraLight · STH-Comet · Mosquitto · MongoDB · ESP32 + DHT11 + LDR</text>
+<rect x="40" y="100" width="1520" height="225" rx="22" fill="#f5eefa" stroke="#8e4fb3" stroke-width="1.6"/>
+<rect x="40" y="355" width="1520" height="540" rx="22" fill="#eef4fc" stroke="#5b84c4" stroke-width="1.6"/>
+<rect x="40" y="925" width="1520" height="240" rx="22" fill="#e9f6f1" stroke="#1f8a7a" stroke-width="1.6"/>
+<text x="64" y="130" font-size="13" fill="#7c3aed" font-weight="700" text-anchor="start" letter-spacing="2">APLICAÇÃO</text>
+<text x="190" y="130" font-size="12" fill="#64748b" font-weight="400" text-anchor="start" >consome e controla os dados</text>
+<text x="64" y="387" font-size="13" fill="#1e40af" font-weight="700" text-anchor="start" letter-spacing="2">BACK-END</text>
+<text x="330" y="387" font-size="12" fill="#64748b" font-weight="400" text-anchor="start" >Docker Compose na EC2 (AWS)</text>
+<text x="64" y="955" font-size="13" fill="#047857" font-weight="700" text-anchor="start" letter-spacing="2">IoT</text>
+<text x="290" y="955" font-size="12" fill="#64748b" font-weight="400" text-anchor="start" >dispositivo que sente e atua</text>
+<text x="100" y="158" font-size="11.5" fill="#7c3aed" font-weight="600" text-anchor="start" >App do dashboard · Expo · React Native · TypeScript · abas: Dashboard, Dispositivos, Triggers, Config</text>
+<line x1="100" y1="164" x2="1190" y2="164" stroke="#7c3aed" stroke-width="1" opacity=".45"/>
+<rect x="100" y="172" width="200" height="100" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="100" y="172" width="7" height="100" rx="3" fill="#7c3aed"/>
+<text x="118" y="194" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">ABA</text>
+<text x="118" y="217" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Dispositivos</text>
+<text x="118" y="238" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >cadastra e exclui devices</text>
+<text x="118" y="254" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >cria a subscription STH</text>
+<rect x="330" y="172" width="180" height="100" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="330" y="172" width="7" height="100" rx="3" fill="#7c3aed"/>
+<text x="348" y="194" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">ABA</text>
+<text x="348" y="217" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Triggers</text>
+<text x="348" y="238" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >limites de temperatura,</text>
+<text x="348" y="254" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >umidade e luminosidade</text>
+<rect x="540" y="172" width="650" height="100" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="540" y="172" width="7" height="100" rx="3" fill="#7c3aed"/>
+<text x="558" y="194" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">ABA</text>
+<text x="558" y="217" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Dashboard</text>
+<text x="558" y="238" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >valor atual (Orion) + 3 gráficos de linha (STH-Comet), atualização a cada 5 s</text>
+<text x="558" y="254" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >compara com os triggers e envia alertTemp · alertHum · alertLum · alertOff</text>
+<rect x="1320" y="172" width="200" height="100" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="6 4" filter="url(#sh)"/>
+<rect x="1320" y="172" width="7" height="100" rx="3" fill="#94a3b8"/>
+<text x="1338" y="194" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">SETUP INICIAL</text>
+<text x="1338" y="217" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Service group</text>
+<text x="1338" y="238" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >apikey TEF no IoT Agent</text>
+<text x="1338" y="254" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >(Postman ou curl)</text>
+<rect x="100" y="440" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="100" y="440" width="7" height="110" rx="3" fill="#1d4ed8"/>
+<line x1="288" y1="516" x2="288" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="282" y1="516" x2="282" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="276" y1="516" x2="276" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="118" y="462" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">FIWARE GE</text>
+<text x="118" y="485" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >IoT Agent UltraLight</text>
+<text x="118" y="506" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >traduz MQTT ↔ NGSIv2</text>
+<text x="118" y="522" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >repassa os comandos</text>
+<rect x="241.0" y="449" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="264.5" y="461.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:4041</text>
+<rect x="540" y="440" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="540" y="440" width="7" height="110" rx="3" fill="#1d4ed8"/>
+<line x1="728" y1="516" x2="728" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="722" y1="516" x2="722" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="716" y1="516" x2="716" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="558" y="462" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">FIWARE GE</text>
+<text x="558" y="485" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Orion Context Broker</text>
+<text x="558" y="506" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >estado atual das entidades</text>
+<text x="558" y="522" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >API NGSIv2 · subscriptions</text>
+<rect x="681.0" y="449" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="704.5" y="461.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:1026</text>
+<rect x="980" y="440" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="980" y="440" width="7" height="110" rx="3" fill="#1d4ed8"/>
+<line x1="1168" y1="516" x2="1168" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="1162" y1="516" x2="1162" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="1156" y1="516" x2="1156" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="998" y="462" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">FIWARE GE</text>
+<text x="998" y="485" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >STH-Comet</text>
+<text x="998" y="506" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >histórico (série temporal)</text>
+<text x="998" y="522" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >consultas lastN</text>
+<rect x="1121.0" y="449" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="1144.5" y="461.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:8666</text>
+<rect x="1320" y="440" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1320" y="440" width="7" height="110" rx="3" fill="#94a3b8"/>
+<line x1="1508" y1="516" x2="1508" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="1502" y1="516" x2="1502" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="1496" y1="516" x2="1496" y2="538" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="1338" y="462" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">COMPLEMENTAR</text>
+<text x="1338" y="485" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >MongoDB · histórico</text>
+<text x="1338" y="506" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >bancos sth_&lt;service&gt;</text>
+<text x="1338" y="522" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >armazena a série temporal</text>
+<rect x="1454.4" y="449" width="53.6" height="18" rx="9" fill="#1d4ed8"/>
+<text x="1481.2" y="461.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:27017</text>
+<rect x="100" y="660" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="100" y="660" width="7" height="110" rx="3" fill="#94a3b8"/>
+<line x1="288" y1="736" x2="288" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="282" y1="736" x2="282" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="276" y1="736" x2="276" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="118" y="682" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">COMPLEMENTAR</text>
+<text x="118" y="705" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Eclipse Mosquitto</text>
+<text x="118" y="726" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >broker MQTT</text>
+<text x="118" y="742" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >telemetria (attrs) e cmd</text>
+<rect x="241.0" y="669" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="264.5" y="681.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:1883</text>
+<rect x="540" y="660" width="200" height="110" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="540" y="660" width="7" height="110" rx="3" fill="#94a3b8"/>
+<line x1="728" y1="736" x2="728" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="722" y1="736" x2="722" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<line x1="716" y1="736" x2="716" y2="758" stroke="#bfdbfe" stroke-width="2.4" stroke-linecap="round"/>
+<text x="558" y="682" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">COMPLEMENTAR</text>
+<text x="558" y="705" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >MongoDB · contexto</text>
+<text x="558" y="726" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >orion-&lt;service&gt; · iotagent</text>
+<text x="558" y="742" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >contexto Orion e agente</text>
+<rect x="667.8" y="669" width="60.2" height="18" rx="9" fill="#fff" stroke="#94a3b8" stroke-dasharray="3 3"/>
+<text x="697.9" y="681.5" font-size="10" fill="#64748b" font-weight="600" text-anchor="middle" >interno</text>
+<rect x="860" y="650" width="660" height="130" rx="12" fill="#fff" stroke="#93c5fd" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="882" y="678" font-size="13" fill="#1e40af" font-weight="700" text-anchor="start" >Portas liberadas no Security Group da EC2</text>
+<rect x="882.0" y="692" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="905.5" y="704.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:1026</text>
+<rect x="937.0" y="692" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="960.5" y="704.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:1883</text>
+<rect x="992.0" y="692" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="1015.5" y="704.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:4041</text>
+<rect x="1047.0" y="692" width="47.0" height="18" rx="9" fill="#1d4ed8"/>
+<text x="1070.5" y="704.5" font-size="10.5" fill="#fff" font-weight="700" text-anchor="middle" >:8666</text>
+<text x="882" y="738" font-size="11.5" fill="#475569" font-weight="400" text-anchor="start" >MongoDB (27017): não liberar no Security Group em nuvem.</text>
+<text x="882" y="758" font-size="11.5" fill="#475569" font-weight="400" text-anchor="start" >PoC sem camada de segurança: HTTP e MQTT sem TLS.</text>
+<rect x="60" y="985" width="940" height="155" rx="12" fill="#fff" stroke="#6ee7b7" stroke-width="1.6" filter="url(#sh)"/>
+<rect x="60" y="985" width="7" height="155" rx="3" fill="#0f9d7a"/>
+<text x="84" y="1010" font-size="14" fill="#0f172a" font-weight="700" text-anchor="start" >ESP32 DevKit V1 · Wi-Fi + PubSubClient (MQTT)</text>
+<rect x="75" y="1024" width="340" height="104" rx="10" fill="#f0fdf9" stroke="#99e0cc" stroke-dasharray="4 3"/>
+<text x="89" y="1041" font-size="9" fill="#047857" font-weight="700" text-anchor="start" letter-spacing="1">SENSORES</text>
+<rect x="87" y="1052" width="150" height="64" rx="8" fill="#fff" stroke="#cbd5e1"/>
+<text x="101" y="1077" font-size="13" fill="#0f172a" font-weight="700" text-anchor="start" >DHT11</text>
+<text x="101" y="1096" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="start" >temp · umid · GPIO15</text>
+<rect x="252" y="1052" width="150" height="64" rx="8" fill="#fff" stroke="#cbd5e1"/>
+<text x="266" y="1077" font-size="13" fill="#0f172a" font-weight="700" text-anchor="start" >LDR</text>
+<text x="266" y="1096" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="start" >luminosidade · GPIO34</text>
+<rect x="455" y="1038" width="180" height="76" rx="10" fill="#fff" stroke="#6ee7b7" stroke-width="1.6"/>
+<text x="545" y="1066" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle" >Firmware (.ino)</text>
+<text x="545" y="1084" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="middle" >lê · publica · executa</text>
+<text x="545" y="1099" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="middle" >comandos remotos</text>
+<rect x="675" y="1024" width="310" height="104" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-dasharray="4 3"/>
+<text x="689" y="1041" font-size="9" fill="#c2410c" font-weight="700" text-anchor="start" letter-spacing="1">ATUADORES</text>
+<rect x="687" y="1052" width="140" height="64" rx="8" fill="#fff" stroke="#cbd5e1"/>
+<text x="699" y="1077" font-size="13" fill="#0f172a" font-weight="700" text-anchor="start" >LED azul</text>
+<text x="699" y="1096" font-size="10" fill="#64748b" font-weight="400" text-anchor="start" >onboard · GPIO2</text>
+<rect x="842" y="1052" width="131" height="64" rx="8" fill="#fff" stroke="#cbd5e1"/>
+<text x="854" y="1077" font-size="13" fill="#0f172a" font-weight="700" text-anchor="start" >Buzzer</text>
+<text x="854" y="1096" font-size="10" fill="#64748b" font-weight="400" text-anchor="start" >GPIO25 · 3 padrões</text>
+<line x1="415" y1="1076" x2="455" y2="1076" stroke="#0f9d8a" stroke-width="2"  marker-end="url(#a-0f9d8a)"/>
+<line x1="635" y1="1076" x2="675" y2="1076" stroke="#ea580c" stroke-width="2"  marker-end="url(#a-ea580c)"/>
+<rect x="1030" y="985" width="490" height="155" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1030" y="985" width="7" height="155" rx="3" fill="#0f9d7a"/>
+<text x="1048" y="1007" font-size="9" fill="#94a3b8" font-weight="700" text-anchor="start" letter-spacing="1">FIRMWARE · REGRA DE ALERTA</text>
+<text x="1048" y="1030" font-size="13.5" fill="#0f172a" font-weight="700" text-anchor="start" >Acionado pelo front-end</text>
+<text x="1048" y="1051" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >Parâmetro fora do trigger → LED azul pisca até normalizar.</text>
+<text x="1048" y="1067" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >Buzzer: temperatura 2 bipes · umidade 1 longo ·</text>
+<text x="1048" y="1083" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >luminosidade 3 curtos.</text>
+<text x="1048" y="1099" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >Simulação no Wokwi usa DHT22 + LDR.</text>
+<line x1="200" y1="272" x2="200" y2="440" stroke="#64748b" stroke-width="2"  marker-end="url(#a-64748b)"/>
+<text x="214" y="346" font-size="11" fill="#64748b" font-weight="600" text-anchor="start" >provisiona devices · :4041</text>
+<line x1="640" y1="272" x2="640" y2="440" stroke="#ea580c" stroke-width="2"  marker-end="url(#a-ea580c)"/>
+<circle cx="640" cy="300" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="640" y="304.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >A</text>
+<text x="660" y="346" font-size="11" fill="#ea580c" font-weight="600" text-anchor="start" >GET valor atual · PATCH comando · :1026</text>
+<line x1="1080" y1="272" x2="1080" y2="440" stroke="#0f9d8a" stroke-width="2"  marker-end="url(#a-0f9d8a)"/>
+<circle cx="1080" cy="300" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="1080" y="304.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >6</text>
+<text x="1100" y="346" font-size="11" fill="#0f9d8a" font-weight="600" text-anchor="start" >GET histórico · :8666</text>
+<line x1="510" y1="222" x2="540" y2="222" stroke="#64748b" stroke-width="2"  marker-end="url(#a-64748b)"/>
+<line x1="300" y1="470" x2="540" y2="470" stroke="#0f9d8a" stroke-width="2"  marker-end="url(#a-0f9d8a)"/>
+<circle cx="420" cy="470" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="420" y="474.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >3</text>
+<line x1="540" y1="520" x2="300" y2="520" stroke="#ea580c" stroke-width="2"  marker-end="url(#a-ea580c)"/>
+<circle cx="420" cy="520" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="420" y="524.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >B</text>
+<line x1="740" y1="495" x2="980" y2="495" stroke="#0f9d8a" stroke-width="2"  marker-end="url(#a-0f9d8a)"/>
+<circle cx="860" cy="495" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="860" y="499.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >4</text>
+<text x="860" y="523" font-size="10.5" fill="#0f9d8a" font-weight="600" text-anchor="middle" >notificação (subscription)</text>
+<line x1="1180" y1="495" x2="1320" y2="495" stroke="#64748b" stroke-width="2" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#a-64748b)"/>
+<circle cx="1250" cy="495" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="1250" y="499.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >5</text>
+<line x1="640" y1="550" x2="640" y2="660" stroke="#64748b" stroke-width="2" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#a-64748b)"/>
+<line x1="300" y1="535" x2="540" y2="700" stroke="#64748b" stroke-width="2" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#a-64748b)"/>
+<line x1="170" y1="660" x2="170" y2="550" stroke="#0f9d8a" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#a-0f9d8a)"/>
+<circle cx="170" cy="605" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="170" y="609.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >2</text>
+<line x1="230" y1="550" x2="230" y2="660" stroke="#ea580c" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#a-ea580c)"/>
+<circle cx="230" cy="605" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="230" y="609.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >C</text>
+<line x1="170" y1="985" x2="170" y2="770" stroke="#0f9d8a" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#a-0f9d8a)"/>
+<circle cx="170" cy="880" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="170" y="884.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >1</text>
+<line x1="230" y1="770" x2="230" y2="985" stroke="#ea580c" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#a-ea580c)"/>
+<circle cx="230" cy="880" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="230" y="884.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >C</text>
+<text x="252" y="884" font-size="11" fill="#64748b" font-weight="600" text-anchor="start" >MQTT · :1883</text>
+<rect x="40" y="1190" width="1520" height="195" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+<text x="64" y="1222" font-size="14" fill="#0f9d8a" font-weight="700" text-anchor="start" >Telemetria: do sensor ao dashboard</text>
+<circle cx="76" cy="1246" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1250.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >1</text>
+<text x="98" y="1250" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >ESP32 publica /TEF/vinheria001/attrs no Mosquitto</text>
+<circle cx="76" cy="1268" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1272.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >2</text>
+<text x="98" y="1272" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >Mosquitto entrega ao IoT Agent (inscrito nos tópicos)</text>
+<circle cx="76" cy="1290" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1294.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >3</text>
+<text x="98" y="1294" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >IoT Agent atualiza a entidade no Orion</text>
+<circle cx="76" cy="1312" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1316.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >4</text>
+<text x="98" y="1316" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >Orion notifica o STH-Comet (subscription)</text>
+<circle cx="76" cy="1334" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1338.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >5</text>
+<text x="98" y="1338" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >STH-Comet grava a série temporal no MongoDB</text>
+<circle cx="76" cy="1356" r="11.5" fill="#0f9d8a" stroke="#fff" stroke-width="2"/>
+<text x="76" y="1360.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >6</text>
+<text x="98" y="1360" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >Dashboard consulta o histórico no STH-Comet (:8666)</text>
+<text x="600" y="1222" font-size="14" fill="#ea580c" font-weight="700" text-anchor="start" >Comando: do dashboard ao atuador</text>
+<circle cx="612" cy="1246" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="612" y="1250.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >A</text>
+<text x="634" y="1250" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >Dashboard envia alertTemp/Hum/Lum/Off ao Orion (PATCH)</text>
+<circle cx="612" cy="1268" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="612" y="1272.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >B</text>
+<text x="634" y="1272" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >Orion repassa ao IoT Agent (registration)</text>
+<circle cx="612" cy="1290" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="612" y="1294.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >C</text>
+<text x="634" y="1294" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >IoT Agent publica /TEF/vinheria001/cmd; ESP32 executa</text>
+<circle cx="612" cy="1312" r="11.5" fill="#ea580c" stroke="#fff" stroke-width="2"/>
+<text x="612" y="1316.3" font-size="12" fill="#fff" font-weight="700" text-anchor="middle" >D</text>
+<text x="634" y="1316" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >ESP32 confirma em /cmdexe pelo caminho 1 → 2 → 3</text>
+<text x="600" y="1346" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start" >Valor volta ao normal → novo comando desliga LED e buzzer.</text>
+<text x="1130" y="1222" font-size="14" fill="#0f172a" font-weight="700" text-anchor="start" >Como ler</text>
+<line x1="1130" y1="1248" x2="1186" y2="1248" stroke="#64748b" stroke-width="2"  marker-end="url(#a-64748b)"/>
+<text x="1198" y="1252" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >HTTP / NGSIv2 (REST)</text>
+<line x1="1130" y1="1270" x2="1186" y2="1270" stroke="#64748b" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#a-64748b)"/>
+<text x="1198" y="1274" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >MQTT</text>
+<line x1="1130" y1="1292" x2="1186" y2="1292" stroke="#64748b" stroke-width="2" stroke-dasharray="1.5 5" stroke-linecap="round" marker-end="url(#a-64748b)"/>
+<text x="1198" y="1296" font-size="12" fill="#334155" font-weight="400" text-anchor="start" >MongoDB</text>
+<rect x="1130" y="1312" width="14" height="14" rx="3" fill="#0f9d8a"/>
+<text x="1150" y="1324" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start" >telemetria</text>
+<rect x="1260" y="1312" width="14" height="14" rx="3" fill="#ea580c"/>
+<text x="1280" y="1324" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start" >comando</text>
+<rect x="1390" y="1312" width="14" height="14" rx="3" fill="#64748b"/>
+<text x="1410" y="1324" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start" >configuração</text>
+<text x="1130" y="1352" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >As setas partem de quem inicia a comunicação.</text>
+<text x="1130" y="1370" font-size="11" fill="#64748b" font-weight="400" text-anchor="start" >Barra azul = FIWARE GE · cinza = complementar.</text>
+</svg>
