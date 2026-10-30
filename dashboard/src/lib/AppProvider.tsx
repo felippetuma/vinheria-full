@@ -14,7 +14,7 @@ export const DEFAULT_STATE: AppState = {
   triggers: {
     temperature: { min: 10, max: 15 },
     humidity: { min: 60, max: 80 },
-    luminosity: { min: 20, max: 61 },
+    luminosity: { min: 0, max: 40 },
   },
   selected: null,
   autoAlerts: true,
