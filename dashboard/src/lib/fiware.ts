@@ -18,10 +18,8 @@ export const COMMANDS = {
   off: 'alertOff',          // desliga LED
 };
 
-// LDR do ESP32 chega como leitura bruta do ADC (0–4095); o app trabalha em %
-const ADC_MAX = 4095;
-const toValue = (m: Metric, v: number) =>
-  m === 'luminosity' ? Math.min(100, Math.max(0, Math.round((v / ADC_MAX) * 100))) : v;
+// O firmware já publica a luminosidade em % (0–100) e o app trabalha em %: sem conversão
+const toValue = (_m: Metric, v: number) => v;
 
 const base = (s: Settings, port: number) => `http://${s.host}:${port}`;
 
