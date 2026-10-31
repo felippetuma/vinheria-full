@@ -1,4 +1,4 @@
-# Vinheria Full (CP5)
+# Vinheria Full
 
 Monitoramento de temperatura, umidade e luminosidade de vinherias com ESP32, FIWARE e um dashboard mobile. Quando um valor sai do trigger, o dashboard aciona o LED azul e o buzzer do ESP32 remotamente, e o alerta dura até o valor normalizar.
 
