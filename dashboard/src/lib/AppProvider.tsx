@@ -12,7 +12,7 @@ export const DEFAULT_STATE: AppState = {
     cometNotifyUrl: 'http://sth-comet:8666/notify',
   },
   triggers: {
-    temperature: { min: 10, max: 15 },
+    temperature: { min: 10, max: 30 },
     humidity: { min: 60, max: 80 },
     luminosity: { min: 0, max: 40 },
   },

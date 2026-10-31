@@ -114,7 +114,9 @@ export async function deleteDevice(s: Settings, device: Device) {
       method: 'DELETE',
       headers: headers(s),
     });
-  } catch {}
+  } catch {
+    // Falha ao apagar a entidade no Orion não impede a exclusão: o device já saiu do IoT Agent acima
+  }
 }
 
 export async function getLatest(s: Settings, entity: string): Promise<Partial<Record<Metric, number>>> {
