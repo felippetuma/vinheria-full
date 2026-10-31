@@ -14,8 +14,6 @@ Monitoramento de temperatura, umidade e luminosidade de vinherias com ESP32, FIW
 | Renan Martins da Silva | `569549` |
 | Yan da Silva Lima | `572373` |
 
-Os nomes vêm do cabeçalho de `firmware/vinheria_full/vinheria_full.ino`.
-
 ## Links
 
 | Item | Link |
