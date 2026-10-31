@@ -40,6 +40,5 @@ O Wokwi roda na nuvem, então a porta 1883 da EC2 precisa estar aberta para a in
 
 ## Pontos de atenção
 
-- O `libraries.txt` do repositório lista `dhtESP32-rmt`, enquanto o sketch usa `DHTesp`. Ajuste para `DHTesp` no Wokwi. O diretório só documenta isso, não alterei o arquivo.
 - Com o DHT22, o firmware publica 1 casa decimal (`DHT_CASAS_DECIMAIS` = 1).
 - Para provocar alertas, mude temperatura, umidade e luz pelos controles dos sensores no Wokwi.
